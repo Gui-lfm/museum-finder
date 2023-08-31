@@ -1,5 +1,8 @@
 package com.betrybe.museumfinder.model;
 
+/**
+ * Classe que representa um museu.
+ */
 public class Museum {
 
   long id;
