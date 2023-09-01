@@ -15,11 +15,11 @@ public class Museum {
   Coordinate coordinate;
   Long legacyId;
 
-  public long getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -79,11 +79,11 @@ public class Museum {
     this.coordinate = coordinate;
   }
 
-  public long getLegacyId() {
+  public Long getLegacyId() {
     return legacyId;
   }
 
-  public void setLegacyId(long legacyId) {
+  public void setLegacyId(Long legacyId) {
     this.legacyId = legacyId;
   }
 }
