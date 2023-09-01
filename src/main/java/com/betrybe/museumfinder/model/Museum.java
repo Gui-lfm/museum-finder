@@ -5,7 +5,7 @@ package com.betrybe.museumfinder.model;
  */
 public class Museum {
 
-  long id;
+  Long id;
   String name;
   String description;
   String address;
@@ -13,7 +13,7 @@ public class Museum {
   String subject;
   String url;
   Coordinate coordinate;
-  long legacyId;
+  Long legacyId;
 
   public long getId() {
     return id;
