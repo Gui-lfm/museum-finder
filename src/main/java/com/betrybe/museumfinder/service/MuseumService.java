@@ -10,6 +10,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Camada service da aplicação.
+ */
 @Service
 public class MuseumService implements MuseumServiceInterface {
 
@@ -22,6 +25,10 @@ public class MuseumService implements MuseumServiceInterface {
 
   @Override
   public Museum getClosestMuseum(Coordinate coordinate, Double maxDistance) {
+    if (!CoordinateUtil.isCoordinateValid(coordinate)) {
+      throw new InvalidCoordinateException("Coordenadas inválidas!");
+    }
+
     Optional<Museum> closestMuseum = database.getClosestMuseum(coordinate, maxDistance);
 
     if (closestMuseum.isEmpty()) {
@@ -34,7 +41,7 @@ public class MuseumService implements MuseumServiceInterface {
   public Museum createMuseum(Museum museum) {
 
     if (!CoordinateUtil.isCoordinateValid(museum.getCoordinate())) {
-      throw new InvalidCoordinateException("Coordenadas inválidas");
+      throw new InvalidCoordinateException("Coordenadas inválidas!");
     }
 
     return database.saveMuseum(museum);
