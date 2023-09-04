@@ -7,6 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Código usado para centralizar as exceções lançadas pela aplicação.
+ */
 @ControllerAdvice
 public class GlobalControllerAdvice {
 
