@@ -54,6 +54,9 @@ public class MuseumController {
     return ResponseEntity.ok().body(ModelDtoConverter.modelToDto(response));
   }
 
+  /**
+   * Procura o museu conforme o id informado.
+   */
   @GetMapping("/{id}")
   public ResponseEntity<MuseumDto> getMuseumById(@PathVariable Long id) {
     Museum response = service.getMuseum(id);
